@@ -8,8 +8,8 @@ port = 30000
 
 def handle_client(client_socket):
 	request	= client_socket.recv(2048)
-	print ("[*] Recieved: %s", request)
-	client_socket.send("ACK!")
+	print ("[*] Recieved:", request)
+	client_socket.send("ACK!\n")
 	client_socket.close()
 
 def main():
