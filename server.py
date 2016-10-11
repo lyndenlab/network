@@ -7,7 +7,7 @@ ipaddr = "0.0.0.0"
 port = 30000
 
 def handle_client(client_socket):
-	request	= client_socket.recv(2048)	
+	request	= client_socket.recv(2048)
 	print ("[*] Recieved: %s", %request)
 	client_socket.send("ACK!")
 	client_socket.close()
@@ -19,8 +19,8 @@ def main():
 
 	while True:
 		client, addr = server.accept()
-		client_handler = threading.Thread(target=handle_client, args=(client,))		
-		client_handler.start()	
+		client_handler = threading.Thread(target=handle_client, args=(client,))
+		client_handler.start()
 
 if __name__ == '__main__':
 	main()
