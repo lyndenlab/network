@@ -9,7 +9,7 @@ buff = 1024
 
 def handle_client(client_socket):
 	request	= client_socket.recv(buff)
-	print ("[*] Recieved:", request)
+	print ("Recieved:", request)
 	client_socket.send("ACK!\n")
 	client_socket.close()
 
