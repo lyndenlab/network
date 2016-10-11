@@ -8,12 +8,12 @@ port = 30000
 
 def handle_client(client_socket):
 	request	= client_socket.recv(2048)
-	print ("[*] Recieved: %s", %request)
+	print ("[*] Recieved: %s", request)
 	client_socket.send("ACK!")
 	client_socket.close()
 
 def main():
-	server = socket.socket(AF_INET, SOCK_STREAM)
+	server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 	server.bind((ipaddr, port))
 	server.listen(5)
 
