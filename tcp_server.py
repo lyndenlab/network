@@ -5,9 +5,10 @@ import threading
 
 ipaddr = "0.0.0.0"
 port = 30000
+buff = 1024
 
 def handle_client(client_socket):
-	request	= client_socket.recv(2048)
+	request	= client_socket.recv(buff)
 	print ("[*] Recieved:", request)
 	client_socket.send("ACK!\n")
 	client_socket.close()
