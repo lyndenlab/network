@@ -1,7 +1,6 @@
 #!/usr/local/bin/python
 
 import socket
-import threading
 
 ipaddr = "0.0.0.0"
 port = 30000
